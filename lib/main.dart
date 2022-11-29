@@ -15,6 +15,21 @@ class PersonalExpensesApp extends StatelessWidget {
       title: 'Personal Expenses App',
       theme: ThemeData(
         primarySwatch: Colors.purple,
+        fontFamily: 'Quicksand',
+        textTheme: TextTheme(
+          titleMedium: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        appBarTheme: AppBarTheme(
+          titleTextStyle: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       home: MyHomePage(),
     );
@@ -68,7 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Personal Expenses App'),
+        title: Text(
+          'Personal Expenses App',
+        ),
         actions: [
           IconButton(
             onPressed: () => _startAddNewTransaction(context),
