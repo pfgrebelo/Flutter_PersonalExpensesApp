@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import './transaction.dart';
 
@@ -10,6 +11,7 @@ class PersonalExpensesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Personal Expenses App',
       home: MyHomePage(),
     );
@@ -41,7 +43,7 @@ class MyHomePage extends StatelessWidget {
           title: Text('Personal Expenses App'),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Container(
@@ -50,6 +52,31 @@ class MyHomePage extends StatelessWidget {
                 color: Colors.blue,
                 child: Text('CHART!'),
                 elevation: 5,
+              ),
+            ),
+            Card(
+              elevation: 5,
+              child: Container(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Title'),
+                    ),
+                    TextField(
+                      decoration: InputDecoration(labelText: 'Amount'),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text('Add Transaction'),
+                      style: ButtonStyle(
+                        foregroundColor:
+                            MaterialStateProperty.all(Colors.purple),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
             Column(
@@ -90,7 +117,7 @@ class MyHomePage extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                tx.date.toString(),
+                                DateFormat('E, dd MMM, yyyy').format(tx.date),
                                 style: TextStyle(
                                   color: Colors.grey,
                                 ),
