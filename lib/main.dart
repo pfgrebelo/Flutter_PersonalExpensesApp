@@ -13,7 +13,7 @@ class PersonalExpensesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Personal Expenses App',
+      title: 'Personal Expenses',
       theme: ThemeData(
         primarySwatch: Colors.purple,
         fontFamily: 'Quicksand',
@@ -95,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Personal Expenses App',
+          'Personal Expenses',
         ),
         actions: [
           IconButton(
