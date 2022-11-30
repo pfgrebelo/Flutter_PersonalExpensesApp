@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
   //const MyHomePage({super.key});
 
   final List<Transaction> _userTransactions = [
-    Transaction(
+    /* Transaction(
       id: 't1',
       title: 'New shoes',
       amount: 69.99,
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       title: 'Supermarket',
       amount: 23.53,
       date: DateTime.now(),
-    ),
+    ), */
   ];
 
   void _addNewTransaction(String title, double amount) {
